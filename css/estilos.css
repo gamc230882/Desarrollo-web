@@ -79,6 +79,7 @@ h2{
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 .hero-image{
@@ -117,21 +118,25 @@ h2{
 	display: flex;
 	justify-content: space-between;
 	align-items: center;
-	}
+	flex-wrap: wrap;
+}
 
-	.project-couse,
-	.project-course,
-	.project-url{
-		margin: 10px 0;
-	}
+.project-course{
+		/* font-size: 25px; */
+}
+
+.project-url{
+	  margin: 10px 0;
+}
 	
-	.project-description{
-font-size: 20px;
-	}
+.project-description{
+	  font-size: 20px;
+}
 
-	.project strong{
+.project strong{
 		font-family: "Fjalla one";
-	}
+		letter-spacing: 0.8px;
+}
 
 	/*.project-date{
 		margin: 10px 0;
@@ -139,21 +144,26 @@ font-size: 20px;
 
 	.project-url{
 		margin: 10px 0;*/
-	}
+}
 
-	.project-title{
+.project-title{
 		font-size: 30px;
 		margin: 10PX 0;
 		margin-bottom: 10px;
 		margin-bottom: 10px;
-	}
+}
 
 .project-details{
-	width: 500px;
+	/* width: 500px; */
+	width: 50%;
 }
 .project-imageContainer{
-	width: 500px;
-	margin-left: 80px;
+	/* width: 500px; */
+	/* margin-left: 80px; */
+	width: 50%;	
+}
+.project-imageContainer img{
+max-width: 100%;
 }
 
 .header{
@@ -163,6 +173,7 @@ font-size: 20px;
 	height: 70px;
 	align-items: center;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
 
 ol,
@@ -174,13 +185,6 @@ ul {
 
 figure {
 	margin: 0;
-
-}
-
-
-.header a{
-	color: white;
-	text-decoration: none;
 }
 
 .menu {
@@ -199,6 +203,8 @@ figure {
 	align-items: center;
 	height: inherit;
 	padding: 0 10px;
+	color: white;
+	text-decoration: none;
 }
 
 
@@ -222,6 +228,8 @@ figure {
 	display: flex;
 	align-items: center;
 	justify-content: space-between;
+	flex-wrap: wrap;	
+	padding: 0px;
 }
 
 .footer img{
@@ -235,25 +243,20 @@ figure {
 	display: flex;
 	
 }
-
-
 .event{
 /*	border: 1px solid red;*/
-	margin: 10px;
-	width: 480px;
+	margin: 1%;
+	width: 48%;
 border-radius: 10px;
 overflow: hidden;
-flex-shrink: 0;
+flex-shrink: initial;
 background-color:#F4FBFF;
 }
-
-
 .event img{
-	width: 480px;
-	height: 300px;
+	width: 100%;
+	height: 300%;
 	/*object-fit: cover;*/
 }
-
 .event-detail{
 	margin: 20PX 40px;
 	background: white;
@@ -263,12 +266,11 @@ background-color:#F4FBFF;
 	border-radius: 10px;
 	text-align: center;
 	
+	
 }
-
 .event-description{
-text-align: left;
+text-align: center;
 }
-
 .event-url{
 border: 1px solid;
 padding: 5px 10px;
@@ -276,32 +278,29 @@ border-radius: 5px;
 text-decoration: none;
 color: #056fff;
 }
-
 .event-out-title{
 	margin-left: 30PX;
 }
-
 .creamos{
 	background-color:#056FFF ;
 	color: white;
 	height: 120px;
 	align-items: center;
 	display: flex;
-	padding: 20px;
+	padding: 8px 20px 20px 20px;
 	justify-content: space-between;
+	flex-wrap: wrap;
 }
-
-.social{
+.social a{
+	border-radius: 8px;
 }
-
 .social-link{
 	width: 50px;
 	height: 50px;
-	margin: 0 10px;
+	margin: 0 5px;
 	display:inline-block ;
 	background-size: 50px 50px;
 }
-
 .social-link.twitter {
 	background-image: url("https://store-images.s-microsoft.com/image/apps.50484.9007199266244427.4d45042b-d7a5-4a83-be66-97779553b24d.2c71c1ea-c28f-4dd1-b72d-c43cdd3476f4");
 }
@@ -324,11 +323,10 @@ color: #056fff;
 	border-style: solid;
 	padding: 10px 20px 10px 50px ;
 	background-image: url("https://cdn5.dibujos.net/dibujos/pintar/sobre.gif");
-background-size: 30px 30px;
-background-repeat: no-repeat;
-background-position-y: center;
+	background-size: 30px 30px;
+	background-repeat: no-repeat;
+	background-position-y: center;
 }
-
 .form-email button{
 	display: block;
 	margin-top: 10px;
@@ -339,36 +337,120 @@ background-position-y: center;
 	width: 100px;
 	margin: 10px;
 }
-
 .container{
 	/*border: 1px solid red;*/
-	width: 1000px;
+	max-width: 1000px;
 	margin: 0 auto;
 	justify-content: inherit;
 	display: inherit;
 	align-items: inherit;
 	flex-wrap: wrap;
 	height: inherit;
+	flex: auto;
+	padding: 0 5px;
 	
 }
-
  /* si vamos hacer Desktop first, comenzar primero por el MQ mas grande  */
-
-
 
  @media screen and (max-width: 1024px){
 
  }
+ @media screen and (max-width: 767px){
+.header{
+	display: block;
+	height: auto;
+}
+.header ol{
+	display: block;
+}
+.header ol li{
+	height: 50px;
+}
+.header a{
+	justify-content: center;
+}
+.header .logo{
+	text-align: center;
+}
+.project{
+	display: block;
+}
+.project-imageContainer{
+	width: auto;
+	text-align: center;
+}
+.project-details{
+	width: auto;
+	font-size: 16px;
+}
+.project-title{
+	font-size: 1.1em;
+	margin-bottom: auto;
+}
 
- @media screen and (max-width: 768px){
-	body{
-	border: 10px solid greenyellow;
+.project-date{
+	font-size: 1em;
+	margin: .4em 0;
+	
+}
+.project-course{
+	font-size: .8em;
+	margin: .4em 0;
+	
+}
+.project-url{
+	font-size: 1em;
+	margin: .4em 0;
+
+}
+.project-description{
+	font-size: 1em;
+
+}
+.event{
+	display: block;
+	width: auto;
+}
+.event-detail{
+margin: -40px 15px 15px 15px;
+
+}
+.event img{
+	width: 100%;
+}
+.creamos{
+	height: auto;
+	text-align: center;
+	display: block;	
+}
+.footer{
+		padding: 0 18px;
+		text-align: center;
+}
+.form-email button{
+		margin: auto;
+		margin-top: 1em;
+		margin-bottom: 1em;
+		padding: .7em;
+}
+.footer{
+	display: block;
+}
+.hero{
+	height: auto;
+}
 }
 
 @media screen and (max-width: 480px){
-
+.project-details{
+	width: auto;
+	font-size: 12px;
+}
 }
 
 @media screen and (max-width: 320px){
-
+.project-details{
+	width: auto;
+	font-size: 10px;
+}
 }
