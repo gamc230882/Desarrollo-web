@@ -400,14 +400,48 @@ color: #056fff;
 	height: 100%;
 	padding: 0 5px;
 }
+
+.burger-button{
+	width: 40px;
+	height: 40px;
+	border-radius: 20px;
+	background: rgba(0, 0, 0, .7);
+	display: none;
+	position: fixed;
+	top: 10px;
+	left: 10px;
+	z-index: 4;
+		
+}
+
+
+
+.icon-menu{
+	/* Para centrar el icono se puede utilizar display flex +
+	 align items center + justify-content center.  */
+	/* display: flex;
+	align-items: center;
+	justify-content: center; */
+	
+	/* Para centrar vamos a usar line height y text aling center */
+	line-height: 40px;
+	text-align: center;
+	color: white;
+	font-size: 20px;
+}
+
+/* .icon-menu */
 /* si vamos hacer Desktop first, comenzar primero por el MQ mas grande  */
 
 @media screen and (max-width: 1024px){
 	H1{
 		background: rgba(0,0,0,.5);
-}
+	}
 @media screen and (max-width: 767px){
-
+.burger-button{
+	display:block;
+}
+	
 .container-h{
 	height: 322px;
 }
@@ -423,10 +457,9 @@ H1{
 	font-size: 2em;
 	z-index: 2;
 	margin-top: -100px;
-	background: rgba(0,0,0,.5);
-
-	
+	background: rgba(0,0,0,.5);	
 }
+
 .hero-image{
 	z-index: 1;
 	position: absolute;
@@ -435,24 +468,53 @@ H1{
 	left: 0;
 	bottom: 0;
 }
+
 .header{
 	display: block;
 }
+
 .header ol{
 	display: block;
 }
+
 .header ol li{
 	height: 50px;
 }
+
 .header a{
 	justify-content: center;
+	height: 40px;
+	font-size:2em ;
+	text-decoration: underline;
+	margin-bottom: .5em;
 }
+
 .header .logo{
 	text-align: center;
 }
+
+.menu{
+	position: fixed;
+	background: rgba(5, 111, 255, .8);
+	z-index: 3;
+	left: -100vw;
+	top: 0;
+	width: 100vw;
+	/* height: 100vh; */
+	bottom: 0;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	transition: .3s;
+}
+.menu.is-active{
+	left: 0;
+}
+
 .project{
 	display: block;
 }
+
 .project-imageContainer{
 	width: auto;
 	text-align: center;
@@ -461,71 +523,82 @@ H1{
 	width: auto;
 	font-size: 16px;
 }
+
 .project-title{
 	font-size: 1.1em;
 	margin-bottom: auto;
 }
+
 .project-date{
 	font-size: 1em;
 	margin: .4em 0;
 }
+
 .project-course{
 	font-size: .8em;
 	margin: .4em 0;
 }
+
 .project-url{
 	font-size: 1em;
 	margin: .4em 0;
 }
+
 .project-description{
 	font-size: 1em;
 }
+
 .event{
 	display: block;
 	width: auto;
 }
+
 .event-detail{
 margin: -40px 15px 15px 15px;
 }
+
 .event img{
 	width: 100%;
 }
+
 .creamos{
 	height: auto;
 	text-align: center;
 	display: block;	
 }
+
 .footer{
-		padding: 0 18px;
-		text-align: center;
+	padding: 0 18px;
+	text-align: center;
 }
+
 .form-email button{
-		margin: auto;
-		margin-top: 1em;
-		margin-bottom: 1em;
-		padding: .7em;
+	margin: auto;
+	margin-top: 1em;
+	margin-bottom: 1em;
+	padding: .7em;
 }
+
 .footer{
 	display: block;
 }
 }
-@media screen and (max-width: 480px){
 
+@media screen and (max-width: 480px){
 h1{
 	font-size: 1.5em;
 	background: rgba(0,0,0,.5);
-
 }
+
 @media screen and (max-width: 320px){
 .project-details{
 	width: auto;
 	font-size: 10px;
 }
+
 h1{
 	font-size: 1.3em;
 	background: rgba(0,0,0,.5);
 }
-
-
 
 }
